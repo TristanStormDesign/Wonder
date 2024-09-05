@@ -82,8 +82,7 @@ The MySQL database `wonder` contains the following tables:
 3. **Configure the database connection:**
 
 - In all PHP files where a database connection is required, ensure the following credentials are correct:
-
-$conn = new mysqli('localhost', 'root', '', 'wonder');
+- $conn = new mysqli('localhost', 'root', '', 'wonder');
 
 4. **Run the server:**
 
@@ -91,11 +90,48 @@ $conn = new mysqli('localhost', 'root', '', 'wonder');
 
 5. Visit the platform:
 
-- Open your browser and go to http://localhost/wonder-platform.
+- Open your browser and go to [http://localhost/wonder-platform](http://localhost/qa_platform/Login/login.php).
 
+## Usage
 
+1. Register and Log In:
+Use the signup form to register a new account.
+Log in using your credentials.
+2. Ask Questions:
+Once logged in, navigate to the home page and ask a question using the form provided.
+3. Answer Questions:
+Browse existing questions and submit answers by visiting the answers page.
+4. Upvote or Downvote:
+Upvote or Downvote answers, limited to 1 vote per question per user.
+5. Admin Control:
+Admin login requires correct details, Admins can delete questions aswell as answers and view users votes.
+6. Log Out:
+Click the "Logout" button on the navigation bar to end your session.
 
+## Security Considerations
 
+SQL Injection: This platform currently uses real_escape_string to handle user input. Consider using prepared statements for enhanced security.
+Password Storage: Passwords are stored in plain text in the database. It's recommended to implement password hashing using password_hash() and password_verify() for secure password storage.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+Fork the repository.
+Create a new branch (git checkout -b feature-branch).
+Commit your changes (git commit -m 'Add new feature').
+Push to the branch (git push origin feature-branch).
+Open a Pull Request.
+License
+This project is licensed under the MIT License.
+
+## Authors
+
+👤 Tristan Storm
+
+GitHub: @TristanStormDesign
+Instagram: @tristanstorm_
+LinkedIn: Tristan Storm
 
 
 
