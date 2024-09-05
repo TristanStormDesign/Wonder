@@ -28,14 +28,14 @@
 
 ## Structure
 
-├── /Images             # Contains the logo and feature images
-├── /Home               # Home page with form to ask questions
-├── /Questions          # Questions page where users can view and answer questions
-├── /Answers            # Answers page where users can see answers to questions
-├── /About              # About page with site information
-├── /Login              # User login page
-├── /Signup             # User registration page
-└── /Admin              # Admin page for managing questions and users
+- /Images             # Contains the logo and feature images
+- /Home               # Home page with form to ask questions
+- /Questions          # Questions page where users can view and answer questions
+- /Answers            # Answers page where users can see answers to questions
+- /About              # About page with site information
+- /Login              # User login page
+- /Signup             # User registration page
+- /Admin              # Admin page for managing questions and users
 
 
 ## Database Schema
