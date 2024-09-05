@@ -26,7 +26,7 @@
 - The user’s session information (username) is displayed on all pages.
 
 
-##Structure
+## Structure
 
 ├── /Images             # Contains the logo and feature images
 ├── /Home               # Home page with form to ask questions
