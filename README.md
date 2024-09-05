@@ -70,7 +70,34 @@ The MySQL database `wonder` contains the following tables:
 ### Steps
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/your-username/wonder-platform.git
+   
+2. **Set up the database:**
+
+-Create a database called wonder.
+-Import the SQL schema (included as wonder.sql) to create the users, questions, and answers tables.
+
+3. **Configure the database connection:**
+
+In all PHP files where a database connection is required, ensure the following credentials are correct:
+
+$conn = new mysqli('localhost', 'root', '', 'wonder');
+
+4. **Run the server:**
+
+Start your Apache or web server and navigate to the project directory.
+
+5. Visit the platform:
+
+Open your browser and go to http://localhost/wonder-platform.
+
+
+
+
+
+
+
 
  
