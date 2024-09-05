@@ -37,79 +37,40 @@
 ├── /Signup             # User registration page
 └── /Admin              # Admin page for managing questions and users
 
-Database Schema
-The MySQL database wonder contains the following tables:
 
-Users:
+## Database Schema
 
-id: INT, Primary Key, Auto Increment
-username: VARCHAR(255)
-password: VARCHAR(255)
-Questions:
+The MySQL database `wonder` contains the following tables:
 
-id: INT, Primary Key, Auto Increment
-username: VARCHAR(255) (foreign key to users)
-question: TEXT
-created_at: TIMESTAMP
-Answers:
+### Users
+- `id`: INT, Primary Key, Auto Increment
+- `username`: VARCHAR(255)
+- `password`: VARCHAR(255)
 
-id: INT, Primary Key, Auto Increment
-question_id: INT (foreign key to questions)
-username: VARCHAR(255) (foreign key to users)
-answer: TEXT
-created_at: TIMESTAMP
-Installation
-Prerequisites
-Apache or any web server supporting PHP.
-MySQL database (or equivalent).
-PHP 7.4+.
-Steps
-Clone the repository:
+### Questions
+- `id`: INT, Primary Key, Auto Increment
+- `username`: VARCHAR(255) (foreign key to users)
+- `question`: TEXT
+- `created_at`: TIMESTAMP
 
-bash
-Copy code
-git clone https://github.com/your-username/wonder-platform.git
-Set up the database:
+### Answers
+- `id`: INT, Primary Key, Auto Increment
+- `question_id`: INT (foreign key to questions)
+- `username`: VARCHAR(255) (foreign key to users)
+- `answer`: TEXT
+- `created_at`: TIMESTAMP
 
-Create a database called wonder.
-Import the SQL schema (included as wonder.sql) to create the users, questions, and answers tables.
-Configure the database connection:
+## Installation
 
-In all PHP files where a database connection is required, ensure the following credentials are correct:
-php
-Copy code
-$conn = new mysqli('localhost', 'root', '', 'wonder');
-Run the server:
+### Prerequisites
+- Apache or any web server supporting PHP.
+- MySQL database (or equivalent).
+- PHP 7.4+.
 
-Start your Apache or web server and navigate to the project directory.
-Visit the platform:
+### Steps
 
-Open your browser and go to http://localhost/wonder-platform.
-Usage
-Register and Log In:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/wonder-platform.git
 
-Use the signup form to register a new account.
-Log in using your credentials.
-Ask Questions:
-
-Once logged in, navigate to the home page and ask a question using the form provided.
-Answer Questions:
-
-Browse existing questions and submit answers by visiting the answers page.
-Log Out:
-
-Click the "Logout" button on the navigation bar to end your session.
-Security Considerations
-SQL Injection: This platform currently uses real_escape_string to handle user input. Consider using prepared statements for enhanced security.
-Password Storage: Passwords are stored in plain text in the database. It's recommended to implement password hashing using password_hash() and password_verify() for secure password storage.
-Contributing
-Contributions are welcome! Please follow these steps:
-
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Commit your changes (git commit -m 'Add new feature').
-Push to the branch (git push origin feature-branch).
-Open a Pull Request.
-License
-This project is licensed under the MIT License.
  
